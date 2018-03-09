@@ -22,11 +22,21 @@ export class AppComponent {
 
   contactsCol: AngularFirestoreCollection<Contact>;
   contacts: Observable<Contact[]>;
+  firstName: string;
+  lastName: string;
+  mobile: number;
+  phone: number;
+  email: string;
+  address: string; 
 
   constructor(private afs: AngularFirestore) {}
 
   ngOnInit() {
   	this.contactsCol = this.afs.collection('contacts');
   	this.contacts = this.contactsCol.valueChanges();
+  }
+
+  addContact() {
+    this.afs.collection('contacts').add({'firstName': this.firstName, 'lastName': this.lastName, 'mobile': this.mobile, 'phone': this.phone, 'email': this.email, 'address': this.address});
   }
 }

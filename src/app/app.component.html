@@ -1,3 +1,11 @@
+<input type="text" [(ngModel)]="firstName" name="firstName" placeholder="First Name">
+<input type="text" [(ngModel)]="lastName" name="lastName" placeholder="Last Name"><br>
+<input type="number" [(ngModel)]="mobile" name="mobile" placeholder="Mobile Number">
+<input type="number" [(ngModel)]="phone" name="phone" placeholder="Phone Number"><br>
+<input type="text" [(ngModel)]="email" name="email" placeholder="E-mail">
+<input type="text" [(ngModel)]="address" name="address" placeholder="Address"><br>
+<input type="submit" value="Add a Contact" (click)="addContact()">
+
 <ul  *ngFor="let contact of contacts | async">
   <li>
     <strong>{{contact.firstName}} {{contact.lastName}}</strong>
