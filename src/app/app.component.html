@@ -18,7 +18,7 @@
   </p>
 
   <li (click)="getContact(contact.id)">
-    <strong>{{contact.firstName}} {{contact.lastName}}</strong>
+    <strong>{{contact.firstName}} {{contact.lastName}}</strong> (<a href="#" (click)="deleteContact(contact.id)">Delete</a>)
     <br>
     Mobile: {{contact.mobile}}<br>
     Phone: {{contact.phone}}<br>
