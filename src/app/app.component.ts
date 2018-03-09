@@ -37,6 +37,6 @@ export class AppComponent {
   }
 
   addContact() {
-    this.afs.collection('contacts').add({'firstName': this.firstName, 'lastName': this.lastName, 'mobile': this.mobile, 'phone': this.phone, 'email': this.email, 'address': this.address});
+    this.afs.collection('contacts').doc('my-custom-id').set({'firstName': this.firstName, 'lastName': this.lastName, 'mobile': this.mobile, 'phone': this.phone, 'email': this.email, 'address': this.address});
   }
 }
